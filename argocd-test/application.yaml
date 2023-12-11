@@ -8,8 +8,8 @@ spec:
 
   source:
     repoURL: https://github.com/grvsobha/argcod.git
-    targetRevision: HEAD
-    path: /
+    targetRevision: main
+    path: argocd-test
   destination: 
     server: https://kubernetes.default.svc
     namespace: frontend
@@ -17,7 +17,10 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-
+  syncOptions:
+    - CreateNamespace=true
+    - SecretName=dockerhub-credentials
     automated:
       selfHeal: true
       prune: true
+      
