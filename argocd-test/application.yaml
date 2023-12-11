@@ -17,6 +17,7 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
+  clusterResourceNamespace: argocd
   syncOptions:
     - CreateNamespace=true
     - SecretName=dockerhub-credentials
