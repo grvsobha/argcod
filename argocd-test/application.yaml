@@ -21,7 +21,7 @@ spec:
   syncOptions:
     - CreateNamespace=true
     - SecretName=dockerhub-credentials
-    automated:
+  automated:
       selfHeal: true
       prune: true
       
